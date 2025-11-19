@@ -222,12 +222,30 @@ nav {
     transition: color 0.3s;
 }
 
-/* .nav-collapse a:hover {
+.nav-collapse a:hover {
     color: #68C3A3;
-} */
+}
 
-.nav-collapse a.active {
-    color: #68C3A3;
+.nav-container ul li a.active {
+    color: #68C3A3; /* The color you want for active link */
+    transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 560px) {
+    .nav-container ul li{
+        margin: 0 auto !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-container ul li a{
+        padding: 10px 10px !important;
+    }
+}
+@media screen and (max-width: 370px) {
+    .nav-container ul li a{
+        padding: auto !important;
+    }
 }
 
 .container_1 {
@@ -239,6 +257,16 @@ nav {
 @media screen and (max-width: 1100px) {
     .container_1{
         width: 100% !important;
+    }
+
+    .section-container{
+        padding: 100px 0 !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .section-container{
+        padding: 75px 0 !important;
     }
 }
 .container {
@@ -1090,6 +1118,33 @@ nav {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .parent-container{
+        padding: 0 80px !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .parent-container{
+        padding: 0 70px !important;
+    }
+    .contact-submit-button{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .parent-container{
+        padding: 0 40px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .parent-container{
+        padding: 0 20px !important;
+    }
 }
 
 .connection-container {

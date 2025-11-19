@@ -1,25 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("span");
-    const navLinks = document.querySelectorAll(".nav-collapse a");
+const navLinks = document.querySelectorAll(".nav-collapse ul li a");
+  const sections = document.querySelectorAll("span[id]");
 
-    window.addEventListener("scroll", () => {
-        let currentSection = "";
+  const observerOptions = {
+    root: null, // viewport
+    rootMargin: "0px",
+    threshold: 0.5 // 50% of the section must be visible to be considered active
+  };
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute("id");
-            }
-        });
-
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
         navLinks.forEach(link => {
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === `#${currentSection}`) {
-                link.classList.add("active");
-            }
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
         });
+      }
     });
-});
+  }, observerOptions);
+
+  // Observe the spans
+  sections.forEach(section => observer.observe(section));

@@ -32,9 +32,9 @@
             </p>
 
             <div class="logos-container">
-                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/chamoun33/CV"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/David_Chamoun33?t=c4LNTM15iKAi2mQxyQLK7w&s=09" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/cha.m.oun_39?igsh=NWFyYmk4b2p1bTF2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/chamoun33/Personal" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/david-chamoun-716b102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
                     target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
@@ -53,7 +53,7 @@
                     <li><a href="#bio">About</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -461,17 +461,16 @@
                         out.</p>
                 </div>
 
-                <form class="form-parent-section">
+                <form class="form-parent-section" id="contact-form">
                     <input id="name" name="name" type="text" placeholder="Name" class="input-field-style" required>
 
                     <input id="email" name="email" type="email" placeholder="Email" class="input-field-style" required>
 
-                    <textarea id="message" name="message" rows="5"
-                        placeholder="Message here... (tell me what's on your mind)"
+                    <textarea id="message" name="message" rows="5" placeholder="Message here..."
                         class="input-field-style textarea-style" required></textarea>
 
                     <div class="contact-submit-button-container">
-                        <button type="button" class="contact-submit-button">Send Message</button>
+                        <button type="submit" class="contact-submit-button">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -482,14 +481,46 @@
                 <p class="connect-desc">Feel free to connect with me on:</p>
 
                 <div class="social-media-links">
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com/in/david-chamoun-716b102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">LinkedIn</a>
+                    <a href="https://github.com/chamoun33/Personal" target="_blank" style="color: #282828;">GitHub</a>
+                    <a href="https://x.com/David_Chamoun33?t=c4LNTM15iKAi2mQxyQLK7w&s=09" target="_blank">Twitter</a>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- Script for the contact section -->
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("3iM3Bz2Tug-byp7UC");
+
+        // Select form
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Send email
+            emailjs.send("service_17accgk", "template_9e9pmxo", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            })
+                .then(function (response) {
+                    alert("Message sent successfully!");
+                    form.reset(); // Clear the form
+                }, function (error) {
+                    alert("Failed to send message. Please try again.");
+                    console.error(error);
+                });
+        });
+    </script>
+
 
     <div class="all-rights-container">
         <p>© 2025 David Chamoun. All rights reserved</p>
