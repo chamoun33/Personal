@@ -711,6 +711,7 @@ nav {
     .container{
         width: 100% !important;
     }
+
 }
 
 /* Responsive design */
@@ -1118,6 +1119,24 @@ nav {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .parent-container{
+        padding: 0 250px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .parent-container{
+        padding: 0 220px !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .parent-container{
+        padding: 0 150px !important;
+    }
 }
 
 @media screen and (max-width: 850px) {
