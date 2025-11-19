@@ -513,14 +513,14 @@
             submitBtn.disabled = true;
             submitBtn.textContent = "Sending...";
             submitBtn.style.cursor = "not-allowed";
-            submitBtn.style.opacity = "0.7";
+            submitBtn.style.opacity = "0.85";
 
 
             // Send email
             emailjs.send("service_17accgk", "template_9e9pmxo", {
-                from_name: document.getElementById("name").value,
-                from_email: document.getElementById("email").value,
-                message: document.getElementById("message").value
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
             })
                 .then(function (response) {
                     alert("Message sent successfully!");
