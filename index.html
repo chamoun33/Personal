@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +44,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.15) 0%, transparent 50%);
@@ -52,8 +53,15 @@
         }
 
         @keyframes bgShift {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
         }
 
         .container {
@@ -276,6 +284,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -286,21 +295,39 @@
             animation: fadeInUp 0.6s ease forwards;
         }
 
-        .link-card:nth-child(1) { animation-delay: 0.1s; }
-        .link-card:nth-child(2) { animation-delay: 0.2s; }
-        .link-card:nth-child(3) { animation-delay: 0.3s; }
-        .link-card:nth-child(4) { animation-delay: 0.4s; }
-        .link-card:nth-child(5) { animation-delay: 0.5s; }
-        .link-card:nth-child(6) { animation-delay: 0.6s; }
+        .link-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .link-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .link-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .link-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>Digital Portfolio</h1>
             <p>Explore my curated collection of innovative projects and digital experiences</p>
         </header>
-        
+
         <div class="links-grid">
             <a href="https://quizzone.rf.gd" class="link-card">
                 <div class="card-icon">
@@ -310,7 +337,7 @@
                 <p>Interactive quizzes with real-time scoring and diverse question types</p>
                 <span class="visit-btn">Take a Quiz</span>
             </a>
-            
+
             <a href="ToolsHub/index.html" class="link-card">
                 <div class="card-icon">
                     <i class="fas fa-tools"></i>
@@ -319,16 +346,16 @@
                 <p>Useful utilities and tools for developers and everyday users</p>
                 <span class="visit-btn">Explore Tools</span>
             </a>
-            
+
             <a href="CV/index.html" class="link-card">
                 <div class="card-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
-                 <h3>Personal CV</h3>
+                <h3>Personal CV</h3>
                 <p>Interactive resume showcasing my skills and experience</p>
                 <span class="visit-btn">View CV</span>
             </a>
-            
+
             <a href="https://davidchamoun.github.io/Personal" class="link-card">
                 <div class="card-icon">
                     <i class="fas fa-mountain"></i>
@@ -337,16 +364,16 @@
                 <p>Stories and photos from my travels and outdoor experiences</p>
                 <span class="visit-btn">Explore Adventures</span>
             </a>
-            
+
             <a href="coming-soon.html" class="link-card">
                 <div class="card-icon">
                     <i class="fas fa-hands-helping"></i>
                 </div>
-                 <h3>Maronite Association</h3>
+                <h3>Maronite Association</h3>
                 <p>Community platform for our Maronite cultural organization</p>
                 <span class="visit-btn">Visit Association</span>
             </a>
-            
+
             <a href="coming-soon.html" class="link-card">
                 <div class="card-icon">
                     <i class="fas fa-dumbbell"></i>
@@ -356,10 +383,21 @@
                 <span class="visit-btn">Download the App</span>
             </a>
         </div>
-        
+
         <footer>
             <p>© 2025 Digital Portfolio | Crafted with passion and innovation</p>
         </footer>
     </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYDZG5B7LB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SYDZG5B7LB');
+    </script>
 </body>
+
 </html>
