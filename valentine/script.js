@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="front flap"></div>
                     <div class="front pocket"></div>
                     <div class="letter">
-                        <p class="words line1">Teresia azde Theresea, </p>
+                        <p class="words line1">Bakboukiiii, </p>
                         <p class="words line2">I'm very lucky to have you in my life :D</p>
                         <p class="words line3">Can't wait to celebrate valentine's with you!</p>
                         <p class="words line4">I love you more than you’ll ever know!</p>
