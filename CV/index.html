@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - David Chamoun</title>
-    <link rel="icon" href="Images/CV_icon.png" type="image/png">
+    <link rel="icon" href="assets/Images/CV_icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
-    <!-- <link rel="icon" type="image/png" href="Images/quiz.png"> -->
+    <!-- <link rel="icon" type="image/png" href="assets/Images/quiz.png"> -->
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -32,7 +32,7 @@
 <body>
     <span id="home"></span>
     <div class="background-container">
-        <img src="Images/home2.jpg" alt="Background Image" class="background-image">
+        <img src="assets/Images/home2.jpg" alt="Background Image" class="background-image">
     </div>
 
     <div class="main-info-container">
@@ -105,7 +105,7 @@
                         technologies, building personal projects, and growing my technical skill set.
                         <br><br>
                         If you're curious to know more about my work and experience, feel free to
-                        <a href="assets/David Chamoun - CV.pdf" target="_blank"
+                        <a href="assets/Documents/David Chamoun - CV.pdf" target="_blank"
                             style="color:#0077cc; text-decoration:underline;">view my CV here</a>.
                     </p>
 
@@ -113,7 +113,7 @@
 
                 <div class="about-profilePic-container">
                     <div class="profilePic">
-                        <img src="Images/IMG-20250413-WA0014.jpg" alt="DavidChamoun">
+                        <img src="assets/Images/IMG-20250413-WA0014.jpg" alt="DavidChamoun">
                     </div>
                 </div>
             </div>
@@ -136,9 +136,10 @@
                 <div class="line"></div>
             </div>
             <div class="project-container">
-                <div class="parent-image-container" onclick="openPreview('https://quizzone.liveblog365.com/', 'QuizZone')">
+                <div class="parent-image-container"
+                    onclick="openPreview('https://quizzone.liveblog365.com/', 'QuizZone')">
                     <div class="image-container">
-                        <img src="Images/QuizIMG.png" alt="QuizZone Project" class="project-image">
+                        <img src="assets/Images/QuizIMG.png" alt="QuizZone Project" class="project-image">
                         <div class="overlay-hover">
                             <div class="project-title">QuizZone</div>
                             <button class="preview-button">Live Preview</button>
@@ -157,7 +158,7 @@
                 <div class="parent-image-container"
                     onclick="openPreview('https://davidchamoun.github.io/Personal/', 'Yalla Out')">
                     <div class="image-container">
-                        <img src="Images/YallaOut.png" alt="Yalla Out Adventures" class="project-image">
+                        <img src="assets/Images/YallaOut.png" alt="Yalla Out Adventures" class="project-image">
                         <div class="overlay-hover">
                             <div class="project-title">Adventure</div>
                             <button class="preview-button">Live Preview</button>
@@ -176,7 +177,8 @@
                 <div class="parent-image-container"
                     onclick="openPreview('https://chamoun33.github.io/Personal/ToolsHub', 'Tools Website')">
                     <div class="image-container">
-                        <img src="Images/Logo higher pixels.png" alt="Tools Website Project" class="project-image">
+                        <img src="assets/Images/Logo higher pixels.png" alt="Tools Website Project"
+                            class="project-image">
                         <div class="overlay-hover">
                             <div class="project-title">Tools Website</div>
                             <button class="preview-button">Live Preview</button>
@@ -194,7 +196,7 @@
                 <div class="parent-image-container"
                     onclick="openPreview('https://youtube.com', 'Maronite Association')">
                     <div class="image-container">
-                        <img src="Images/LogoAR.png" alt="Maronite Association Project" class="project-image">
+                        <img src="assets/Images/LogoAR.png" alt="Maronite Association Project" class="project-image">
                         <div class="overlay-hover">
                             <div class="project-title">Maronite Association</div>
                             <button class="preview-button">Live Preview</button>
@@ -204,6 +206,44 @@
                                     <span class="tech-item">CSS</span>
                                     <span class="tech-item">JS</span>
                                     <span class="tech-item">PHP</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parent-image-container"
+                    onclick="openVideoPreview('assets/Videos/TrafficExpert-preview.mp4', 'Traffic Expert')">
+                    <div class="image-container">
+                        <img src="assets/Images/traffic_expert_logo.png" alt="Traffic Expert Project"
+                            class="project-image">
+                        <div class="overlay-hover">
+                            <div class="project-title">Traffic Expert</div>
+                            <button class="preview-button">Live Preview</button>
+                            <div class="made-in">
+                                <span>
+                                    <span class="tech-item">REACT</span>
+                                    <span class="tech-item">NATIVE</span>
+                                    <span class="tech-item">TSX</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parent-image-container"
+                    onclick="openVideoPreview('assets/Videos/QuizZone-preview.mp4', 'Hotel Management System')">
+
+                    <div class="image-container">
+                        <img src="assets/Images/hotel.png" alt="Hotel Management System Project" class="project-image">
+                        <div class="overlay-hover">
+                            <div class="project-title">Hotel Management System</div>
+                            <button class="preview-button">Live Preview</button>
+                            <div class="made-in">
+                                <span>
+                                    <span class="tech-item">JAVA</span>
+                                    <span class="tech-item">JAVAFX</span>
+                                    <span class="tech-item">FXML</span>
                                 </span>
                             </div>
                         </div>
@@ -225,7 +265,78 @@
                 </div>
             </div>
 
+            <!-- Modal for Video Preview -->
+            <div id="previewVideoModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="VideoTitle">Video Preview</h3>
+                        <button class="close-button" onclick="closeVideoPreview()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="loading-spinner" id="loadingVideoSpinner"></div>
+
+                        <video id="previewVideoPlayer" class="preview-video" controls autoplay muted loop style="display: none;">
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+                </div>
+            </div>
+
+
             <script>
+
+                function openVideoPreview(videoUrl, title) {
+                    const modal = document.getElementById('previewVideoModal');
+                    const video = document.getElementById('previewVideoPlayer');
+                    const modalTitle = document.getElementById('VideoTitle');
+                    const loadingSpinner = document.getElementById('loadingVideoSpinner');
+
+                    modalTitle.textContent = title + ' - Video Preview';
+
+                    // Disable background scrolling
+                    document.body.style.overflow = 'hidden';
+                    document.body.style.position = 'fixed';
+                    document.body.style.top = `-${window.scrollY}px`;
+                    document.body.style.width = '100%';
+
+                    modal.classList.add('active');
+
+                    loadingSpinner.style.display = 'block';
+                    video.style.display = 'none';
+
+                    // Set video source
+                    video.src = videoUrl;
+
+                    // When video is ready
+                    video.onloadeddata = function () {
+                        loadingSpinner.style.display = 'none';
+                        video.style.display = 'block';
+                    };
+                }
+
+                function closeVideoPreview() {
+                    const modal = document.getElementById('previewVideoModal');
+                    const video = document.getElementById('previewVideoPlayer');
+                    const scrollY = document.body.style.top;
+
+                    modal.classList.remove('active');
+
+                    // Restore scrolling
+                    document.body.style.position = '';
+                    document.body.style.top = '';
+                    document.body.style.overflow = '';
+                    document.body.style.width = '';
+
+                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+                    // Stop video completely
+                    video.pause();
+                    video.currentTime = 0;
+                    video.src = '';
+                }
+
+
                 function openPreview(url, title) {
                     const modal = document.getElementById('previewModal');
                     const iframe = document.getElementById('previewIframe');
@@ -286,6 +397,12 @@
                 document.getElementById('previewModal').addEventListener('click', function (e) {
                     if (e.target === this) {
                         closePreview();
+                    }
+                });
+
+                document.getElementById('previewVideoModal').addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeVideoPreview();
                     }
                 });
 
@@ -377,6 +494,15 @@
                             </div>
                             <div class="skill-percentage">75%</div>
                         </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <div class="skill-name">JavaFX</div>
+                                <div class="skill-progress-container">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-percentage">70%</div>
+                        </div>
                     </div>
 
                     <div class="skill-category">
@@ -398,6 +524,15 @@
                                 </div>
                             </div>
                             <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <div class="skill-name">Java</div>
+                                <div class="skill-progress-container">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-percentage">70%</div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
@@ -425,10 +560,11 @@
                         <h3 class="card-title">Tools</h3>
                     </div>
                     <div class="skill-tags">
-                        <div class="skill-tag">Git (85%)</div>
+                        <div class="skill-tag">Git (70%)</div>
                         <div class="skill-tag">Figma (75%)</div>
                         <div class="skill-tag">VS Code (95%)</div>
                         <div class="skill-tag">Postman (80%)</div>
+                        <div class="skill-tag">Scene Builder (80%)</div>
                     </div>
                 </div>
 

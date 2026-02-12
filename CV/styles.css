@@ -456,6 +456,7 @@ nav {
     border: 1px solid var(--glass-border);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
 .parent-image-container:hover {
@@ -662,6 +663,13 @@ nav {
     border: none;
     background: white;
 }
+
+.preview-video {
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+}
+
 
 .loading-spinner {
     position: absolute;
