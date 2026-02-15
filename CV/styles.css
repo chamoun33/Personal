@@ -10,7 +10,11 @@ body {
     /* user-select: none; */
 }
 
-input, textarea, button, a, p{
+input,
+textarea,
+button,
+a,
+p {
     font-family: "Outfit", sans-serif;
 }
 
@@ -227,23 +231,25 @@ nav {
 }
 
 .nav-container ul li a.active {
-    color: #68C3A3; /* The color you want for active link */
+    color: #68C3A3;
+    /* The color you want for active link */
     transition: all 0.2s ease-in;
 }
 
 @media screen and (max-width: 560px) {
-    .nav-container ul li{
+    .nav-container ul li {
         margin: 0 auto !important;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .nav-container ul li a{
+    .nav-container ul li a {
         padding: 10px 10px !important;
     }
 }
+
 @media screen and (max-width: 370px) {
-    .nav-container ul li a{
+    .nav-container ul li a {
         padding: auto !important;
     }
 }
@@ -255,20 +261,21 @@ nav {
 }
 
 @media screen and (max-width: 1100px) {
-    .container_1{
+    .container_1 {
         width: 100% !important;
     }
 
-    .section-container{
+    .section-container {
         padding: 100px 0 !important;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .section-container{
+    .section-container {
         padding: 75px 0 !important;
     }
 }
+
 .container {
     width: 1100px;
     /* border: 1px solid red; */
@@ -321,32 +328,35 @@ nav {
 }
 
 @media screen and (max-width: 1100px) {
-    .about-content-container{
+    .about-content-container {
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
         width: 100% !important;
         gap: 30px;
     }
-    .about-profilePic-container{
+
+    .about-profilePic-container {
         width: 55% !important;
     }
-    .about-info-container{
+
+    .about-info-container {
         width: 100% !important;
     }
 }
 
 @media screen and (max-width: 850px) {
-    .about-profilePic-container{
+    .about-profilePic-container {
         width: 75% !important;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .about-profilePic-container{
+    .about-profilePic-container {
         width: 100% !important;
     }
-    .mouse-icon{
+
+    .mouse-icon {
         display: none;
     }
 }
@@ -568,7 +578,7 @@ nav {
     transition: color 0.2s ease;
 }
 
-.made-in span:hover{
+.made-in span:hover {
     color: #68C3A3;
 }
 
@@ -652,6 +662,70 @@ nav {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: var(--dark);
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 10px -4px 0px 0px var(--light);
+    box-shadow: inset 8px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
 .modal-body {
     height: calc(100% - 40px);
     position: relative;
@@ -668,6 +742,124 @@ nav {
     width: 100%;
     max-height: 70vh;
     border-radius: 8px;
+}
+
+.imageSliderContainer {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+
+.imageSliderContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.contentCard {
+    flex: 0 0 600px;
+    /* bigger card to hold 2 images */
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1340px) {
+    .contentCard {
+        flex: 0 0 550px;
+    }
+
+    .labelContainer {
+        min-height: 135px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contentCard {
+        flex: 0 0 500px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .contentCard {
+        flex: 0 0 450px;
+    }
+
+    .labelContainer p {
+        font-size: 22px !important;
+    }
+
+    .labelContainer span {
+        font-size: 16px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .contentCard {
+        flex: 0 0 500px;
+    }
+
+    .imageSliderContainer {
+        height: auto !important;
+    }
+
+}
+
+.labelContainer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.labelContainer p {
+    font-size: 26px;
+}
+
+.labelContainer span {
+    font-size: 18px;
+    color: #b4b4b4;
+    font-weight: 500;
+}
+
+.imageHolderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.imageHolderContainer img {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lightImage {
+    display: block;
+}
+
+.darkImage {
+    display: none;
+}
+
+.modal.dark-mode .lightImage {
+    display: none;
+}
+
+.modal.dark-mode .darkImage {
+    display: block;
 }
 
 
@@ -710,13 +902,15 @@ nav {
 .tech-item:last-child::after {
     content: '';
 }
+
 @media screen and (max-width: 1400px) {
-    .project-container{
+    .project-container {
         width: 100% !important;
         height: auto !important;
         /* grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); */
     }
-    .container{
+
+    .container {
         width: 100% !important;
     }
 
@@ -1059,7 +1253,7 @@ nav {
 
 /*Contact Style*/
 
-.parent-container{
+.parent-container {
     width: 100%;
     height: auto;
     display: block;
@@ -1069,20 +1263,21 @@ nav {
     box-sizing: border-box;
 }
 
-.contact-header{
+.contact-header {
     width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
     font-size: 18px;
 }
-.contact-header p{
+
+.contact-header p {
     margin: 0;
     text-align: center;
     color: #282828;
 }
 
-.form-parent-section{
+.form-parent-section {
     width: 100%;
     height: auto;
     display: block;
@@ -1090,23 +1285,23 @@ nav {
     align-items: center;
 }
 
-.input-field-style{
+.input-field-style {
     width: 100%;
     height: auto;
     padding: 10px;
     box-sizing: border-box;
     margin-top: 25px;
     border-radius: 7px;
-    border: 1px solid #a0a0a0 ;
+    border: 1px solid #a0a0a0;
 }
 
 .textarea-style {
-  min-height: 120px;
-  resize: vertical;
-  line-height: 1.45;
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.45;
 }
 
-.contact-submit-button-container{
+.contact-submit-button-container {
     width: 100%;
     height: auto;
     align-items: center;
@@ -1115,7 +1310,7 @@ nav {
     margin-top: 25px;
 }
 
-.contact-submit-button{
+.contact-submit-button {
     width: 200px;
     height: auto;
     padding: 12px;
@@ -1130,46 +1325,47 @@ nav {
 }
 
 @media screen and (max-width: 1400px) {
-    .parent-container{
+    .parent-container {
         padding: 0 250px !important;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .parent-container{
+    .parent-container {
         padding: 0 220px !important;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .parent-container{
+    .parent-container {
         padding: 0 150px !important;
     }
 }
 
 @media screen and (max-width: 850px) {
-    .parent-container{
+    .parent-container {
         padding: 0 80px !important;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .parent-container{
+    .parent-container {
         padding: 0 70px !important;
     }
-    .contact-submit-button{
+
+    .contact-submit-button {
         width: 100% !important;
     }
 }
 
 @media screen and (max-width: 620px) {
-    .parent-container{
+    .parent-container {
         padding: 0 40px !important;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .parent-container{
+    .parent-container {
         padding: 0 20px !important;
     }
 }
@@ -1217,7 +1413,7 @@ nav {
     color: #1f6f8b;
 }
 
-.all-rights-container{
+.all-rights-container {
     width: 100%;
     height: auto;
     text-align: center;
@@ -1227,7 +1423,7 @@ nav {
     background-color: #FFFFFF;
 }
 
-.all-rights-container p{
+.all-rights-container p {
     margin: 0;
     font-size: 12px;
     color: #4d4d4d;

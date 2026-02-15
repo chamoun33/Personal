@@ -213,7 +213,7 @@
                 </div>
 
                 <div class="parent-image-container"
-                    onclick="openVideoPreview('assets/Videos/TrafficExpert-preview.mp4', 'Traffic Expert')">
+                    onclick="openImagePreview('assets/Videos/TrafficExpert-preview.mp4', 'Traffic Expert')">
                     <div class="image-container">
                         <img src="assets/Images/traffic_expert_logo.png" alt="Traffic Expert Project"
                             class="project-image">
@@ -275,7 +275,8 @@
                     <div class="modal-body">
                         <div class="loading-spinner" id="loadingVideoSpinner"></div>
 
-                        <video id="previewVideoPlayer" class="preview-video" controls autoplay muted loop style="display: none;">
+                        <video id="previewVideoPlayer" class="preview-video" controls autoplay muted loop
+                            style="display: none;">
                             Your browser does not support the video tag.
                         </video>
 
@@ -283,8 +284,177 @@
                 </div>
             </div>
 
+            <!-- Modal for Live Preview Image Slider -->
+            <div id="imagePreviewModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="imageModalTitle">Preview</h3>
+                        <div class="toggle-switch">
+                            <label class="switch-label">
+                                <input type="checkbox" class="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="imageSliderContainer">
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Expert Portal Access</p>
+                                    <span>Sign in to manage your profile, availability, and location settings.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Login Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Login Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Expert Registration</p>
+                                    <span>Register as a traffic expert to get started.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Register Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Register Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Secure Account Verification</p>
+                                    <span>Verify your account with a one-time password (OTP).</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/OTP Light Mode.png">
+                                    <img class="darkImage" src="assets/Images/Traffic Expert Preview/OTP Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Available Experts (10 KM Radius)</p>
+                                    <span>View a list of nearby traffic experts in your area.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Map Light Mode.png">
+                                    <img class="darkImage" src="assets/Images/Traffic Expert Preview/Map Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Expert Directory</p>
+                                    <span>Search and view expert details and availability status.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert List Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert List Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Accident Assistance Guide</p>
+                                    <span>Important steps to follow in case of a vehicle accident.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Advice Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Advice Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Expert Dashboard</p>
+                                    <span>View personal information and toggle availability status.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert Profile 1 Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert Profile 1 Dark Mode.png">
+                                </div>
+                            </div>
+                            <div class="contentCard">
+                                <div class="labelContainer">
+                                    <p>Account & Tracking Settings</p>
+                                    <span>Update map location, enable live tracking, change password, or log out.</span>
+                                </div>
+                                <div class="imageHolderContainer">
+                                    <img class="lightImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert Profile 2 Light Mode.png">
+                                    <img class="darkImage"
+                                        src="assets/Images/Traffic Expert Preview/Expert Profile 2 Dark Mode.png">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <script>
+
+                const toggleCheckbox = document.querySelector('.checkbox');
+                const modal = document.getElementById('imagePreviewModal');
+
+                toggleCheckbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        modal.classList.add('dark-mode');
+                        console.log("Dark mode enabled");
+                    } else {
+                        modal.classList.remove('dark-mode');
+                        console.log("Dark mode disabled");
+                    }
+                });
+
+
+                function openImagePreview(url, title) {
+                    const modal = document.getElementById('imagePreviewModal');
+                    const modalTitle = document.getElementById('imageModalTitle');
+                    // Set modal title
+                    modalTitle.textContent = title + ' - Preview';
+
+                    // Disable background scrolling completely
+                    document.body.style.overflow = 'hidden';
+                    document.body.style.position = 'fixed';
+                    document.body.style.top = `-${window.scrollY}px`;
+                    document.body.style.width = '100%';
+
+                    // Show modal
+                    modal.classList.add('active');
+
+                }
+
+                function closeImagePreview() {
+                    const modal = document.getElementById('imagePreviewModal');
+                    const iframe = document.getElementById('previewIframe');
+
+                    // Get the scroll position before restoring
+                    const scrollY = document.body.style.top;
+
+                    modal.classList.remove('active');
+
+                    // Restore background scrolling
+                    document.body.style.position = '';
+                    document.body.style.top = '';
+                    document.body.style.overflow = '';
+                    document.body.style.width = '';
+
+                    // Restore scroll position
+                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+                    // Clear iframe source to stop loading
+                    setTimeout(() => {
+                        iframe.src = '';
+                    }, 300);
+                }
 
                 function openVideoPreview(videoUrl, title) {
                     const modal = document.getElementById('previewVideoModal');
@@ -393,6 +563,8 @@
                     }, 300);
                 }
 
+
+
                 // Close modal when clicking outside
                 document.getElementById('previewModal').addEventListener('click', function (e) {
                     if (e.target === this) {
@@ -406,10 +578,18 @@
                     }
                 });
 
+                document.getElementById('imagePreviewModal').addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeImagePreview();
+                    }
+                });
+
                 // Close modal with Escape key
                 document.addEventListener('keydown', function (e) {
                     if (e.key === 'Escape') {
                         closePreview();
+                        closeVideoPreview();
+                        closeImagePreview();
                     }
                 });
             </script>
