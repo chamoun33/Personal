@@ -402,10 +402,11 @@
             <script>
 
                 const toggleCheckbox = document.querySelector('.checkbox');
+                toggleCheckbox.checked = true;
                 const modal = document.getElementById('imagePreviewModal');
 
                 toggleCheckbox.addEventListener('change', function () {
-                    if (this.checked) {
+                    if (!this.checked) {
                         modal.classList.add('dark-mode');
                         console.log("Dark mode enabled");
                     } else {
