@@ -811,6 +811,18 @@ nav {
 
 }
 
+@media screen and (max-width: 550px) {
+    .contentCard {
+        flex: 0 0 450px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contentCard {
+        flex: 0 0 420px;
+    }
+}
+
 .labelContainer {
     display: block;
     justify-content: center;
